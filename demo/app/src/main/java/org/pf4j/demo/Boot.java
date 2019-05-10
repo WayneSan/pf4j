@@ -35,7 +35,7 @@ public class Boot {
 
     public static void main(String[] args) {
         // print logo
-        printLogo();
+        printLogo("PF4J-DEMO");
 
         // create the plugin manager
         final PluginManager pluginManager = new DefaultPluginManager() {
@@ -130,9 +130,9 @@ public class Boot {
         */
     }
 
-    private static void printLogo() {
+    private static void printLogo(String name) {
         System.out.println(StringUtils.repeat("#", 40));
-        System.out.println(StringUtils.center("PF4J-DEMO", 40));
+        System.out.printf("##%s##\n", StringUtils.center(name, 36));
         System.out.println(StringUtils.repeat("#", 40));
     }
 
